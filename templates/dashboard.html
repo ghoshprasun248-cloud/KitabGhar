@@ -1,0 +1,470 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Dashboard - KitabGhar
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="container mt-5">
+
+
+
+
+
+<!-- =====================================================
+     Dashboard Header
+===================================================== -->
+
+
+<div class="card shadow p-4 mb-4">
+
+
+<div class="row align-items-center">
+
+
+<div class="col-md-8">
+
+
+<h2>
+
+Welcome, {{ current_user.username }} 👋
+
+</h2>
+
+
+<p class="text-muted">
+
+Manage your books, downloads and reading activity.
+
+</p>
+
+
+</div>
+
+
+
+<div class="col-md-4 text-end">
+
+
+<a href="{{ url_for('user.profile') }}"
+   class="btn btn-primary">
+
+Edit Profile
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     Dashboard Statistics
+===================================================== -->
+
+
+<div class="row mb-4">
+
+
+
+
+
+<div class="col-md-4">
+
+
+<div class="card shadow text-center p-3">
+
+
+<h3>
+
+📚
+
+</h3>
+
+
+<h5>
+
+Downloads
+
+</h5>
+
+
+<h2>
+
+{{ downloads|length if downloads else 0 }}
+
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-4">
+
+
+<div class="card shadow text-center p-3">
+
+
+<h3>
+
+📖
+
+</h3>
+
+
+<h5>
+
+Reading Books
+
+</h5>
+
+
+<h2>
+
+0
+
+</h2>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-4">
+
+
+<div class="card shadow text-center p-3">
+
+
+<h3>
+
+🔔
+
+</h3>
+
+
+<h5>
+
+Notifications
+
+</h5>
+
+
+<a href="{{ url_for('user.notifications') }}"
+   class="btn btn-outline-dark">
+
+
+View
+
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     Download History
+===================================================== -->
+
+
+<div class="card shadow mb-4">
+
+
+<div class="card-header bg-dark text-white">
+
+
+<h4>
+
+📥 Download History
+
+</h4>
+
+
+</div>
+
+
+
+
+
+<div class="card-body">
+
+
+
+
+
+{% if downloads %}
+
+
+
+
+
+<div class="table-responsive">
+
+
+<table class="table table-striped">
+
+
+<thead>
+
+
+<tr>
+
+<th>
+Book ID
+</th>
+
+
+<th>
+Download Date
+</th>
+
+
+<th>
+Action
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody>
+
+
+{% for download in downloads %}
+
+
+
+<tr>
+
+
+<td>
+
+{{ download.book_id }}
+
+</td>
+
+
+
+<td>
+
+{{ download.download_date }}
+
+</td>
+
+
+
+<td>
+
+
+<a href="{{ url_for('books.details',
+book_id=download.book_id) }}"
+class="btn btn-sm btn-primary">
+
+
+View Book
+
+
+</a>
+
+
+</td>
+
+
+</tr>
+
+
+
+{% endfor %}
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+{% else %}
+
+
+
+<div class="text-center">
+
+
+<p>
+
+You have not downloaded any books yet.
+
+</p>
+
+
+
+<a href="{{ url_for('books.index') }}"
+class="btn btn-success">
+
+
+Explore Books
+
+
+</a>
+
+
+</div>
+
+
+
+
+{% endif %}
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     Reading Progress
+===================================================== -->
+
+
+<div class="card shadow mb-5">
+
+
+<div class="card-header">
+
+
+<h4>
+
+📖 Continue Reading
+
+</h4>
+
+
+</div>
+
+
+
+
+<div class="card-body">
+
+
+<p class="text-muted">
+
+Your reading progress will appear here.
+
+</p>
+
+
+<div class="progress">
+
+
+<div class="progress-bar"
+style="width:0%">
+
+
+0%
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

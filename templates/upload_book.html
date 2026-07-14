@@ -1,0 +1,431 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Upload Book - KitabGhar
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="container mt-5">
+
+
+
+
+
+<div class="row justify-content-center">
+
+
+
+
+
+<div class="col-md-8">
+
+
+
+
+
+<div class="card shadow">
+
+
+
+
+
+<div class="card-header bg-dark text-white text-center">
+
+
+<h3>
+
+⬆ Upload eBook
+
+</h3>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card-body">
+
+
+
+
+
+<form method="POST"
+action="{{ url_for('books.upload') }}"
+enctype="multipart/form-data">
+
+
+
+
+
+
+
+<!-- Book Title -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Book Title
+
+</label>
+
+
+
+<input type="text"
+name="title"
+class="form-control"
+placeholder="Enter book title"
+required>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Author -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Author Name
+
+</label>
+
+
+
+<input type="text"
+name="author"
+class="form-control"
+placeholder="Enter author name"
+required>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Description -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Description
+
+</label>
+
+
+
+<textarea name="description"
+class="form-control"
+rows="5"
+placeholder="Write book description">
+
+</textarea>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ISBN -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+ISBN
+
+</label>
+
+
+
+<input type="text"
+name="isbn"
+class="form-control"
+placeholder="Enter ISBN number">
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Category -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Category
+
+</label>
+
+
+
+<select name="category_id"
+class="form-control"
+required>
+
+
+
+
+<option value="">
+
+Select Category
+
+</option>
+
+
+
+
+{% for category in categories %}
+
+
+
+<option value="{{ category.id }}">
+
+
+{{ category.category_name }}
+
+
+</option>
+
+
+
+{% endfor %}
+
+
+
+
+
+</select>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Price -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Price (₹)
+
+</label>
+
+
+
+<input type="number"
+name="price"
+class="form-control"
+value="0"
+min="0">
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Cover Image -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Book Cover Image
+
+</label>
+
+
+
+<input type="file"
+name="cover"
+class="form-control"
+accept="image/*">
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Book File -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+eBook File
+
+</label>
+
+
+
+<input type="file"
+name="book_file"
+class="form-control"
+accept=".pdf,.epub,.mobi"
+required>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Terms -->
+
+
+<div class="form-check mb-3">
+
+
+<input type="checkbox"
+class="form-check-input"
+required
+id="copyright">
+
+
+<label class="form-check-label"
+for="copyright">
+
+
+I confirm that I have rights to upload this book.
+
+
+</label>
+
+
+</div>
+
+
+
+
+
+
+
+
+<button type="submit"
+class="btn btn-success w-100">
+
+
+Upload Book
+
+
+</button>
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,449 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Admin Dashboard - KitabGhar
+
+{% endblock %}
+
+
+
+
+
+{% block css %}
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/admin.css') }}">
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="container mt-5">
+
+
+
+
+
+<!-- =====================================================
+     Admin Header
+===================================================== -->
+
+
+<div class="card shadow p-4 mb-4 bg-dark text-white">
+
+
+<h2>
+
+⚙️ Admin Dashboard
+
+</h2>
+
+
+<p>
+
+Manage users, books, categories and system activities.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     Statistics Cards
+===================================================== -->
+
+
+<div class="row">
+
+
+
+
+
+
+<div class="col-md-4 mb-3">
+
+
+
+<div class="card shadow text-center p-4">
+
+
+<h1>
+
+👥
+
+</h1>
+
+
+<h4>
+
+Total Users
+
+</h4>
+
+
+
+<h2>
+
+{{ users_count }}
+
+</h2>
+
+
+<a href="{{ url_for('admin.users') }}"
+class="btn btn-primary">
+
+
+Manage Users
+
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-md-4 mb-3">
+
+
+
+<div class="card shadow text-center p-4">
+
+
+<h1>
+
+📚
+
+</h1>
+
+
+<h4>
+
+Total Books
+
+</h4>
+
+
+
+<h2>
+
+{{ books_count }}
+
+</h2>
+
+
+<a href="{{ url_for('admin.books') }}"
+class="btn btn-success">
+
+
+Manage Books
+
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-md-4 mb-3">
+
+
+
+<div class="card shadow text-center p-4">
+
+
+<h1>
+
+⬇️
+
+</h1>
+
+
+<h4>
+
+Downloads
+
+</h4>
+
+
+
+<h2>
+
+{{ downloads_count }}
+
+</h2>
+
+
+<a href="{{ url_for('admin.books') }}"
+class="btn btn-dark">
+
+
+View Library
+
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     Admin Actions
+===================================================== -->
+
+
+<div class="card shadow mt-4 mb-5">
+
+
+
+<div class="card-header">
+
+
+<h4>
+
+Admin Controls
+
+</h4>
+
+
+</div>
+
+
+
+
+
+<div class="card-body">
+
+
+
+
+
+<div class="row">
+
+
+
+
+
+<div class="col-md-4 mb-3">
+
+
+<a href="{{ url_for('admin.users') }}"
+class="btn btn-outline-primary w-100 p-3">
+
+
+👤 User Management
+
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-md-4 mb-3">
+
+
+<a href="{{ url_for('admin.books') }}"
+class="btn btn-outline-success w-100 p-3">
+
+
+📖 Book Approval
+
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-md-4 mb-3">
+
+
+<a href="{{ url_for('admin.categories') }}"
+class="btn btn-outline-warning w-100 p-3">
+
+
+📂 Categories
+
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     System Information
+===================================================== -->
+
+
+<div class="card shadow mb-5">
+
+
+<div class="card-header bg-secondary text-white">
+
+
+<h4>
+
+System Information
+
+</h4>
+
+
+</div>
+
+
+
+
+<div class="card-body">
+
+
+<ul>
+
+
+<li>
+
+Security monitoring enabled
+
+</li>
+
+
+<li>
+
+Audit logging active
+
+</li>
+
+
+<li>
+
+Database connection active
+
+</li>
+
+
+<li>
+
+CDN integration ready
+
+</li>
+
+
+<li>
+
+Notification service available
+
+</li>
+
+
+</ul>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

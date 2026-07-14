@@ -1,0 +1,1365 @@
+/* =====================================================
+   KitabGhar Main Stylesheet
+   Part 26A
+===================================================== */
+
+
+
+/* =====================================================
+   Global Styles
+===================================================== */
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+
+
+body {
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background-color: #f8f9fa;
+
+    color: #333;
+
+    line-height: 1.6;
+
+}
+
+
+
+
+
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   Navbar
+===================================================== */
+
+
+.navbar {
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+
+}
+
+
+
+
+
+.navbar-brand {
+
+    font-size: 1.6rem;
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+.nav-link {
+
+    margin-left: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+
+
+
+.nav-link:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   Hero Section
+===================================================== */
+
+
+.hero-section {
+
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    background:
+
+    linear-gradient(
+
+        rgba(0,0,0,0.65),
+
+        rgba(0,0,0,0.65)
+
+    ),
+
+    url("../images/library-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+
+
+
+.hero-section h1 {
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+.hero-section p {
+
+    font-size: 1.2rem;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   Cards
+===================================================== */
+
+
+.card {
+
+    border: none;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+
+
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    transition: 0.3s;
+
+}
+
+
+
+
+
+.card-header {
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   Buttons
+===================================================== */
+
+
+.btn {
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+
+}
+
+
+
+
+
+.btn:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   Book Cards
+===================================================== */
+
+
+.book-card {
+
+    height: 100%;
+
+}
+
+
+
+
+
+.book-card img {
+
+    height: 250px;
+
+    object-fit: cover;
+
+}
+
+
+
+
+
+.book-card .card-title {
+
+    font-weight: bold;
+
+    font-size: 1.2rem;
+
+}
+
+
+
+
+
+.book-card .price {
+
+    color: #198754;
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   Forms
+===================================================== */
+
+
+.form-control {
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+}
+
+
+
+
+
+.form-control:focus {
+
+    box-shadow: none;
+
+    border-color: #0d6efd;
+
+}
+
+
+
+
+
+label {
+
+    font-weight: 600;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   Dashboard
+===================================================== */
+
+
+.dashboard-card {
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+
+
+
+
+.dashboard-card h2 {
+
+    font-size: 2.5rem;
+
+}
+
+
+
+
+
+.progress {
+
+    height: 20px;
+
+    border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   Profile
+===================================================== */
+
+
+.profile-image {
+
+    width: 120px;
+
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #fff;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   Footer
+===================================================== */
+
+
+footer {
+
+    margin-top: auto;
+
+}
+
+
+
+
+
+footer p {
+
+    font-size: 14px;
+
+}
+/* =====================================================
+   KitabGhar Main Stylesheet
+   Part 26B
+===================================================== */
+
+
+
+
+
+/* =====================================================
+   Book Details Page
+===================================================== */
+
+
+.book-details {
+
+    padding: 30px;
+
+}
+
+
+
+
+
+.book-details img {
+
+    max-height: 450px;
+
+    width: 100%;
+
+    object-fit: contain;
+
+}
+
+
+
+
+
+.book-details h1 {
+
+    font-size: 2.4rem;
+
+    font-weight: 700;
+
+}
+
+
+
+
+
+.book-details .author {
+
+    color: #6c757d;
+
+    font-size: 1.1rem;
+
+}
+
+
+
+
+
+.book-details .description {
+
+    margin-top: 20px;
+
+    text-align: justify;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Search Section
+===================================================== */
+
+
+.search-box {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+}
+
+
+
+
+
+.search-box input {
+
+    height: 45px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Category Buttons
+===================================================== */
+
+
+.category-btn {
+
+    margin: 5px;
+
+    border-radius: 20px;
+
+}
+
+
+
+
+
+.category-btn:hover {
+
+    background-color: #212529;
+
+    color: white;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Tables
+===================================================== */
+
+
+.table {
+
+    background: white;
+
+}
+
+
+
+
+
+.table th {
+
+    font-weight: 700;
+
+}
+
+
+
+
+
+.table td {
+
+    vertical-align: middle;
+
+}
+
+
+
+
+
+.table-hover tbody tr:hover {
+
+    background-color: #f1f1f1;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Alerts
+===================================================== */
+
+
+.alert {
+
+    border-radius: 10px;
+
+}
+
+
+
+
+
+.alert-success {
+
+    border-left: 5px solid #198754;
+
+}
+
+
+
+
+
+.alert-danger {
+
+    border-left: 5px solid #dc3545;
+
+}
+
+
+
+
+
+.alert-warning {
+
+    border-left: 5px solid #ffc107;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Upload Page
+===================================================== */
+
+
+.upload-container {
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+
+
+
+.upload-container textarea {
+
+    resize: none;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Reader Page
+===================================================== */
+
+
+.reader-container {
+
+    background: white;
+
+    padding: 30px;
+
+    min-height: 600px;
+
+    border-radius: 12px;
+
+}
+
+
+
+
+
+.reader-content {
+
+    font-size: 18px;
+
+    line-height: 2;
+
+}
+
+
+
+
+
+.reader-controls {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Admin Section
+===================================================== */
+
+
+.admin-card {
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+}
+
+
+
+
+
+.admin-card h3 {
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+.admin-stat {
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+
+
+
+.admin-stat h2 {
+
+    font-size: 2.5rem;
+
+    margin-top: 10px;
+
+}
+
+
+
+
+
+.admin-menu a {
+
+    display: block;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Empty States
+===================================================== */
+
+
+.empty-state {
+
+    text-align: center;
+
+    padding: 50px;
+
+}
+
+
+
+
+
+.empty-state h3 {
+
+    color: #6c757d;
+
+}
+/* =====================================================
+   KitabGhar Main Stylesheet
+   Part 26C
+===================================================== */
+
+
+
+
+
+/* =====================================================
+   Animations
+===================================================== */
+
+
+@keyframes fadeIn {
+
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+.fade-in {
+
+    animation: fadeIn 0.5s ease-in-out;
+
+}
+
+
+
+
+
+
+
+@keyframes slideIn {
+
+
+    from {
+
+        transform: translateX(-50px);
+
+        opacity: 0;
+
+    }
+
+
+    to {
+
+        transform: translateX(0);
+
+        opacity: 1;
+
+    }
+
+
+}
+
+
+
+
+
+.slide-in {
+
+    animation: slideIn 0.6s ease;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Feature Cards
+===================================================== */
+
+
+.feature-card {
+
+    text-align: center;
+
+    padding: 30px;
+
+    transition: all 0.3s ease;
+
+}
+
+
+
+
+
+.feature-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+
+
+
+
+
+.feature-card h3 {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   Rating Stars
+===================================================== */
+
+
+.rating {
+
+    color: #ffc107;
+
+    font-size: 1.2rem;
+
+}
+
+
+
+
+
+.rating-input {
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Notification Badge
+===================================================== */
+
+
+.notification-badge {
+
+    position: relative;
+
+}
+
+
+
+
+
+.notification-badge span {
+
+    position: absolute;
+
+    top: -8px;
+
+    right: -10px;
+
+    border-radius: 50%;
+
+    padding: 3px 7px;
+
+    font-size: 12px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Accessibility Support
+===================================================== */
+
+
+button:focus,
+
+a:focus,
+
+input:focus,
+
+textarea:focus,
+
+select:focus {
+
+
+    outline: 3px solid #0d6efd;
+
+    outline-offset: 2px;
+
+
+}
+
+
+
+
+
+
+
+.text-readable {
+
+    line-height: 1.8;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+
+
+
+
+
+.high-contrast {
+
+    background: #000;
+
+    color: #fff;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Loading Animation
+===================================================== */
+
+
+.loader {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    border: 5px solid #ddd;
+
+    animation: spin 1s linear infinite;
+
+}
+
+
+
+
+
+@keyframes spin {
+
+
+    0% {
+
+        transform: rotate(0deg);
+
+    }
+
+
+    100% {
+
+        transform: rotate(360deg);
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Error Page
+===================================================== */
+
+
+.error-page {
+
+    min-height: 400px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+
+
+
+.error-page h1 {
+
+    font-size: 6rem;
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Print Support
+===================================================== */
+
+
+@media print {
+
+
+
+.navbar,
+
+footer,
+
+.btn {
+
+
+    display: none;
+
+
+}
+
+
+
+
+
+.card {
+
+
+    box-shadow: none;
+
+}
+
+
+
+body {
+
+
+    background: white;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Extra Mobile Improvements
+===================================================== */
+
+
+@media(max-width:576px){
+
+
+
+.container {
+
+    padding-left: 15px;
+
+    padding-right: 15px;
+
+}
+
+
+
+
+
+.hero-section p {
+
+    font-size: 1rem;
+
+}
+
+
+
+
+
+.hero-section .btn {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+}
+
+
+
+
+
+.card-body {
+
+    padding: 15px;
+
+}
+
+
+
+
+
+.display-4 {
+
+    font-size: 2rem;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   End Of Main Stylesheet
+===================================================== */
+
+
+
+
+
+
+/* =====================================================
+   Mobile Navigation
+===================================================== */
+
+
+@media(max-width:768px){
+
+
+
+.navbar-brand {
+
+    font-size: 1.3rem;
+
+}
+
+
+
+.hero-section {
+
+    min-height: 350px;
+
+}
+
+
+
+.hero-section h1 {
+
+    font-size: 2rem;
+
+}
+
+
+
+.card {
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.table {
+
+    font-size: 14px;
+
+}
+
+
+
+}

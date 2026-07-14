@@ -1,0 +1,437 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Manage Users - Admin
+
+{% endblock %}
+
+
+
+
+
+{% block css %}
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/admin.css') }}">
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="container mt-5">
+
+
+
+
+
+<!-- =====================================================
+     Header
+===================================================== -->
+
+
+<div class="card shadow mb-4">
+
+
+<div class="card-header bg-dark text-white">
+
+
+<h3>
+
+👥 User Management
+
+</h3>
+
+
+</div>
+
+
+
+<div class="card-body">
+
+
+<p>
+
+View and control all registered users.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     Users Table
+===================================================== -->
+
+
+<div class="card shadow">
+
+
+
+
+
+<div class="card-body">
+
+
+
+
+
+<div class="table-responsive">
+
+
+
+
+
+<table class="table table-bordered table-hover">
+
+
+
+
+
+<thead class="table-dark">
+
+
+<tr>
+
+
+<th>
+
+ID
+
+</th>
+
+
+<th>
+
+Username
+
+</th>
+
+
+<th>
+
+Email
+
+</th>
+
+
+<th>
+
+Role
+
+</th>
+
+
+<th>
+
+Status
+
+</th>
+
+
+<th>
+
+Created
+
+</th>
+
+
+<th>
+
+Actions
+
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+
+
+<tbody>
+
+
+
+
+{% for user in users %}
+
+
+
+
+<tr>
+
+
+<td>
+
+{{ user.id }}
+
+</td>
+
+
+
+
+
+<td>
+
+{{ user.username }}
+
+</td>
+
+
+
+
+
+<td>
+
+{{ user.email }}
+
+</td>
+
+
+
+
+
+<td>
+
+
+{% if user.role == "admin" %}
+
+
+<span class="badge bg-danger">
+
+Admin
+
+</span>
+
+
+{% else %}
+
+
+<span class="badge bg-primary">
+
+User
+
+</span>
+
+
+{% endif %}
+
+
+
+</td>
+
+
+
+
+
+
+<td>
+
+
+
+{% if user.status == "active" %}
+
+
+
+<span class="badge bg-success">
+
+Active
+
+</span>
+
+
+
+{% else %}
+
+
+
+<span class="badge bg-danger">
+
+Blocked
+
+</span>
+
+
+
+{% endif %}
+
+
+
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+{{ user.created_at }}
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+
+
+
+
+{% if user.status == "active" %}
+
+
+
+<a href="{{ url_for('admin.block_user',
+user_id=user.id) }}"
+class="btn btn-sm btn-danger">
+
+
+Block
+
+
+</a>
+
+
+
+
+{% else %}
+
+
+
+
+<a href="{{ url_for('admin.activate_user',
+user_id=user.id) }}"
+class="btn btn-sm btn-success">
+
+
+Activate
+
+
+</a>
+
+
+
+{% endif %}
+
+
+
+
+
+
+
+</td>
+
+
+
+
+
+</tr>
+
+
+
+
+
+{% else %}
+
+
+
+<tr>
+
+
+<td colspan="7"
+class="text-center">
+
+
+No users found
+
+
+</td>
+
+
+</tr>
+
+
+
+
+{% endfor %}
+
+
+
+
+
+</tbody>
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,512 @@
+/* =====================================================
+   KitabGhar Admin Panel Stylesheet
+===================================================== */
+
+
+
+
+
+/* =====================================================
+   Admin Dashboard
+===================================================== */
+
+
+.admin-dashboard {
+
+    padding: 20px;
+
+}
+
+
+
+
+
+.admin-dashboard .card {
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+
+
+
+.admin-dashboard .card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Admin Header
+===================================================== */
+
+
+.admin-header {
+
+    background: #212529;
+
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+
+
+.admin-header h2 {
+
+    font-weight: 700;
+
+}
+
+
+
+
+
+.admin-header p {
+
+    opacity: 0.8;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Statistics Cards
+===================================================== */
+
+
+.admin-stat-card {
+
+    text-align: center;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+}
+
+
+
+
+
+.admin-stat-card .icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+
+
+.admin-stat-card h3 {
+
+    font-size: 2.2rem;
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+.admin-stat-card p {
+
+    color: #6c757d;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Admin Tables
+===================================================== */
+
+
+.admin-table {
+
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+
+
+
+.admin-table thead {
+
+    background: #212529;
+
+    color: white;
+
+}
+
+
+
+
+
+.admin-table th {
+
+    text-align: center;
+
+    padding: 12px;
+
+}
+
+
+
+
+
+.admin-table td {
+
+    vertical-align: middle;
+
+    text-align: center;
+
+}
+
+
+
+
+
+.admin-table tbody tr:hover {
+
+    background-color: #f8f9fa;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Admin Buttons
+===================================================== */
+
+
+.admin-btn {
+
+    border-radius: 8px;
+
+    padding: 7px 15px;
+
+    font-weight: 600;
+
+}
+
+
+
+
+
+.btn-approve {
+
+    background-color: #198754;
+
+    color: white;
+
+}
+
+
+
+
+
+.btn-approve:hover {
+
+    background-color: #146c43;
+
+    color: white;
+
+}
+
+
+
+
+
+.btn-reject {
+
+    background-color: #ffc107;
+
+    color: black;
+
+}
+
+
+
+
+
+.btn-reject:hover {
+
+    background-color: #ffca2c;
+
+}
+
+
+
+
+
+.btn-delete {
+
+    background-color: #dc3545;
+
+    color: white;
+
+}
+
+
+
+
+
+.btn-delete:hover {
+
+    background-color: #bb2d3b;
+
+    color: white;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   User Management
+===================================================== */
+
+
+.user-status-active {
+
+    color: #198754;
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+.user-status-blocked {
+
+    color: #dc3545;
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Category Management
+===================================================== */
+
+
+.category-box {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+
+}
+
+
+
+
+
+.category-box:hover {
+
+    transform: translateY(-3px);
+
+    transition: 0.3s;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Admin Forms
+===================================================== */
+
+
+.admin-form {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+}
+
+
+
+
+
+.admin-form label {
+
+    font-weight: 600;
+
+}
+
+
+
+
+
+.admin-form input,
+
+.admin-form textarea,
+
+.admin-form select {
+
+    border-radius: 8px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Admin Sidebar
+===================================================== */
+
+
+.admin-sidebar {
+
+    min-height: 100vh;
+
+    background: #212529;
+
+    padding: 20px;
+
+}
+
+
+
+
+
+.admin-sidebar a {
+
+    display: block;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+.admin-sidebar a:hover {
+
+    background: rgba(255,255,255,0.15);
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   Responsive Admin Panel
+===================================================== */
+
+
+@media(max-width:768px){
+
+
+
+.admin-stat-card {
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+.admin-table {
+
+    font-size: 13px;
+
+}
+
+
+
+
+
+.admin-sidebar {
+
+    min-height: auto;
+
+}
+
+
+
+}

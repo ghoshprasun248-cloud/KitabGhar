@@ -1,0 +1,310 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Register - KitabGhar
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="container mt-5">
+
+
+<div class="row justify-content-center">
+
+
+<div class="col-md-6">
+
+
+
+
+
+<div class="card shadow">
+
+
+
+<div class="card-header bg-dark text-white text-center">
+
+
+<h3>
+
+📝 Create Account
+
+</h3>
+
+
+</div>
+
+
+
+
+
+
+<div class="card-body">
+
+
+
+
+
+
+<form method="POST"
+      action="{{ url_for('auth.register') }}">
+<div class="mb-3">
+    <label class="form-label">
+        Full Name
+    </label>
+
+    <input type="text"
+           name="full_name"
+           class="form-control"
+           placeholder="Enter your full name"
+           required>
+</div>
+
+
+
+
+
+
+<!-- Username -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Username
+
+</label>
+
+
+
+<input type="text"
+       name="username"
+       class="form-control"
+       placeholder="Enter username"
+       minlength="3"
+       required>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Email -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Email Address
+
+</label>
+
+
+
+<input type="email"
+       name="email"
+       class="form-control"
+       placeholder="Enter email"
+       required>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Password -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Password
+
+</label>
+
+
+
+<input type="password"
+       name="password"
+       class="form-control"
+       placeholder="Minimum 8 characters"
+       minlength="8"
+       required>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Confirm Password -->
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Confirm Password
+
+</label>
+
+
+
+<input type="password"
+       name="confirm_password"
+       class="form-control"
+       placeholder="Confirm password"
+       required>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Terms -->
+
+
+<div class="form-check mb-3">
+
+
+<input class="form-check-input"
+       type="checkbox"
+       required
+       id="terms">
+
+
+<label class="form-check-label"
+       for="terms">
+
+
+I agree to KitabGhar Terms and Privacy Policy
+
+
+</label>
+
+
+</div>
+
+
+
+
+
+
+
+
+<button type="submit"
+        class="btn btn-success w-100">
+
+
+Register
+
+
+</button>
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+
+
+<p class="text-center">
+
+
+Already have an account?
+
+
+<a href="{{ url_for('auth.login') }}">
+
+
+Login Here
+
+
+</a>
+
+
+</p>
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

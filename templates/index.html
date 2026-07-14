@@ -1,0 +1,465 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+KitabGhar - Home
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+<!-- =====================================================
+     Hero Section
+===================================================== -->
+
+
+<section class="hero-section">
+
+
+<div class="container text-center">
+
+
+<h1 class="display-4 fw-bold">
+
+Welcome to KitabGhar 📚
+
+</h1>
+
+
+
+<p class="lead">
+
+Your Digital Library for Reading,
+Managing and Discovering eBooks
+
+</p>
+
+
+
+
+<a href="{{ url_for('books.index') }}"
+   class="btn btn-primary btn-lg mt-3">
+
+Explore Books
+
+</a>
+
+
+
+{% if not current_user.is_authenticated %}
+
+
+<a href="{{ url_for('auth.register') }}"
+   class="btn btn-outline-light btn-lg mt-3">
+
+Join Now
+
+</a>
+
+
+{% endif %}
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================================================
+     Search Section
+===================================================== -->
+
+
+<section class="container mt-5">
+
+
+<div class="card shadow p-4">
+
+
+<h3 class="text-center">
+
+Find Your Favourite Book
+
+</h3>
+
+
+
+<form action="{{ url_for('books.search') }}"
+      method="GET">
+
+
+<div class="input-group mt-3">
+
+
+<input type="text"
+       name="q"
+       class="form-control"
+       placeholder="Search by title or author...">
+
+
+<button class="btn btn-dark">
+
+Search
+
+</button>
+
+
+</div>
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================================================
+     Features
+===================================================== -->
+
+
+<section class="container mt-5">
+
+
+<h2 class="text-center mb-4">
+
+Why Choose KitabGhar?
+
+</h2>
+
+
+
+
+<div class="row text-center">
+
+
+
+
+
+<div class="col-md-4 mb-3">
+
+
+<div class="card h-100 shadow p-3">
+
+
+<h3>
+
+📖
+
+</h3>
+
+
+<h5>
+
+Digital Reading
+
+</h5>
+
+
+<p>
+
+Read your favourite eBooks anytime,
+anywhere with online preview.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-4 mb-3">
+
+
+<div class="card h-100 shadow p-3">
+
+
+<h3>
+
+🔍
+
+</h3>
+
+
+<h5>
+
+Smart Search
+
+</h5>
+
+
+<p>
+
+Quickly discover books using
+categories and filters.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-4 mb-3">
+
+
+<div class="card h-100 shadow p-3">
+
+
+<h3>
+
+🔒
+
+</h3>
+
+
+<h5>
+
+Secure Platform
+
+</h5>
+
+
+<p>
+
+Protected accounts,
+safe downloads and privacy.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     Functional Requirements
+===================================================== -->
+
+
+<section class="container mt-5">
+
+
+<h2 class="text-center">
+
+Platform Features
+
+</h2>
+
+
+
+
+<div class="row mt-4">
+
+
+
+<div class="col-md-6">
+
+
+<ul class="list-group">
+
+
+<li class="list-group-item">
+
+✅ User Registration and Authentication
+
+</li>
+
+
+<li class="list-group-item">
+
+✅ eBook Upload and Management
+
+</li>
+
+
+<li class="list-group-item">
+
+✅ Search and Filtering
+
+</li>
+
+
+<li class="list-group-item">
+
+✅ eBook Reader and Preview
+
+</li>
+
+
+<li class="list-group-item">
+
+✅ Purchase and Download System
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="col-md-6">
+
+
+<ul class="list-group">
+
+
+<li class="list-group-item">
+
+✅ Reading Progress Sync
+
+</li>
+
+
+<li class="list-group-item">
+
+✅ Ratings and Reviews
+
+</li>
+
+
+<li class="list-group-item">
+
+✅ Notifications and Alerts
+
+</li>
+
+
+<li class="list-group-item">
+
+✅ Admin Panel
+
+</li>
+
+
+<li class="list-group-item">
+
+✅ Mobile Responsive Design
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     Call To Action
+===================================================== -->
+
+
+<section class="container mt-5 mb-5 text-center">
+
+
+<div class="card bg-dark text-white p-5">
+
+
+<h2>
+
+Start Your Reading Journey Today
+
+</h2>
+
+
+
+<p>
+
+Thousands of books are waiting for you.
+
+</p>
+
+
+
+<a href="{{ url_for('books.index') }}"
+   class="btn btn-light">
+
+Browse Library
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+{% endblock %}

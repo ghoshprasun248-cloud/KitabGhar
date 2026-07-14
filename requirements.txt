@@ -1,0 +1,68 @@
+# Flask Framework
+Flask==3.0.3
+
+# Database Connection
+Flask-MySQLdb==2.0.0
+mysqlclient==2.2.4
+
+# Environment Variables
+python-dotenv==1.0.1
+
+# Authentication & Security
+Flask-Bcrypt==1.0.1
+Flask-Login==0.6.3
+Flask-WTF==1.2.1
+WTForms==3.1.2
+
+# File Upload & Validation
+Werkzeug==3.0.3
+Pillow==10.4.0
+
+# Email Notifications
+Flask-Mail==0.10.0
+
+# PDF / Ebook Processing
+PyPDF2==3.0.1
+ebooklib==0.18
+
+# Payment Integration Support
+stripe==10.2.0
+
+# API Support
+Flask-RESTful==0.3.10
+Flask-CORS==4.0.1
+
+# Database Migration
+Flask-Migrate==4.0.7
+SQLAlchemy==2.0.32
+Flask-SQLAlchemy==3.1.1
+
+# Security Headers
+Flask-Talisman==1.1.0
+
+# Caching / Performance
+Flask-Caching==2.3.0
+redis==5.0.8
+
+# Background Tasks
+celery==5.4.0
+
+# Image Processing
+opencv-python==4.10.0.84
+
+# Search Engine Support
+whoosh==2.7.4
+
+# Date and Time Utilities
+python-dateutil==2.9.0.post0
+
+# Production Server
+gunicorn==22.0.0
+
+# Development Tools
+pytest==8.3.2
+pytest-flask==1.3.0
+
+# Code Quality
+black==24.8.0
+flake8==7.1.1
