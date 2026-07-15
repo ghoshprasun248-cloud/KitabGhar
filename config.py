@@ -202,3 +202,5 @@ config = {
     "default": DevelopmentConfig
 
 }
+MYSQL_SSL_MODE = "VERIFY_IDENTITY"
+MYSQL_SSL_CA = "isrgrootx1.pem"
