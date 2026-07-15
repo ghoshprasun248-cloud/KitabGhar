@@ -160,6 +160,8 @@ class Config:
     MYSQL_DB = "kitabghar"
 
     MYSQL_PORT = 4000
+    MYSQL_SSL = {"ca": "isrgrootx1.pem"}
+    MYSQL_CURSORCLASS = "DictCursor"
 
 class DevelopmentConfig(Config):
 
