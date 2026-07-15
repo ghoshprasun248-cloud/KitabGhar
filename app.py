@@ -60,7 +60,7 @@ def create_app():
 
     app.config["MYSQL_PASSWORD"] = app.config["MYSQL_PASSWORD"]
 
-    app.config["MYSQL_DB"] = app.config["MYSQL_DATABASE"]
+    app.config["MYSQL_DB"] = "kitabghar"
 
     app.config["MYSQL_PORT"] = app.config["MYSQL_PORT"]
 
