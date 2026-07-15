@@ -151,15 +151,15 @@ class Config:
     )
     # Database Configuration
 
-    MYSQL_HOST = "localhost"
+    MYSQL_HOST = "gateway01.ap-southeast-1.prod.aws.tidbcloud.com"
 
-    MYSQL_USER = "root"
+    MYSQL_USER = "p9PcJUvGS7rpgXv.root"
 
-    MYSQL_PASSWORD = "200546###Ka"
+    MYSQL_PASSWORD = "PqW0u3a7ueGd7clw"
 
-    MYSQL_DATABASE = "kitabghar"
+    MYSQL_DB = "kitabghar"
 
-    MYSQL_PORT = 3306
+    MYSQL_PORT = 4000
 
 class DevelopmentConfig(Config):
 
