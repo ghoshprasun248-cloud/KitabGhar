@@ -162,7 +162,8 @@ class Config:
     MYSQL_PORT = 4000
     MYSQL_SSL = {"ca": "isrgrootx1.pem"}
     MYSQL_CURSORCLASS = "DictCursor"
-
+    MYSQL_SSL_MODE = "VERIFY_IDENTITY"
+    MYSQL_SSL_CA = "isrgrootx1.pem"
 class DevelopmentConfig(Config):
 
     DEBUG = True
@@ -204,5 +205,3 @@ config = {
     "default": DevelopmentConfig
 
 }
-MYSQL_SSL_MODE = "VERIFY_IDENTITY"
-MYSQL_SSL_CA = "isrgrootx1.pem"
