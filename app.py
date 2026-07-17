@@ -7,6 +7,9 @@ from flask_cors import CORS
 from flask_migrate import Migrate
 from dotenv import load_dotenv
 import os
+import pymysql
+
+pymysql.install_as_MySQLdb()
 
 
 # Import Configuration
@@ -63,7 +66,9 @@ def create_app():
     app.config["MYSQL_DB"] = "kitabghar"
 
     app.config["MYSQL_PORT"] = app.config["MYSQL_PORT"]
-
+    app.config["MYSQL_SSL"] = {
+    "ca": os.path.join(os.path.dirname(__file__), "isrgrootx1.pem")
+}
 
 
     # Initialize Extensions
